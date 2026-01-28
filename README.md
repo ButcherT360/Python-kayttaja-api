@@ -66,3 +66,58 @@ POST /users → lisää käyttäjä
 
 GET /users → näytä kaikki käyttäjät
 
+## Harjoitusliikkeet (Exercises)
+
+### POST /exercises – lisää liike
+
+Lähetä JSON:
+
+```json
+{
+  "name": "Penkkipunnerrus",
+  "sets": 5,
+  "reps": 5,
+  "weight": 50
+}
+
+Kehonpainoliike ilman painoja:
+
+{
+  "name": "Punnerrus",
+  "sets": 3,
+  "reps": 12,
+  "weight": 0
+}
+
+Vastaus:
+
+{
+  "message": "exercise created",
+  "exercise": {
+    "name": "Penkkipunnerrus",
+    "sets": 5,
+    "reps": 5,
+    "weight": 50
+  }
+}
+
+GET /exercises – näytä kaikki liikkeet
+
+Vastaus:
+
+[
+  {
+    "id": 1,
+    "name": "Penkkipunnerrus",
+    "sets": 5,
+    "reps": 5,
+    "weight": 50.0
+  },
+  {
+    "id": 2,
+    "name": "Punnerrus",
+    "sets": 3,
+    "reps": 12,
+    "weight": 0.0
+  }
+]
